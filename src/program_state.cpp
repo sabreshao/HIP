@@ -419,6 +419,7 @@ hsa_executable_t load_executable(const string& file, hsa_executable_t executable
 
 // To force HIP to load the kernels and to setup the function
 // symbol map on program startup
+#if 0
 class startup_kernel_loader {
    private:
     startup_kernel_loader() { functions(); }
@@ -427,5 +428,6 @@ class startup_kernel_loader {
     static startup_kernel_loader skl;
 };
 startup_kernel_loader startup_kernel_loader::skl;
+#endif
 
 }  // Namespace hip_impl.
