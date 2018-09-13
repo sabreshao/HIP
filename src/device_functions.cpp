@@ -154,7 +154,7 @@ __device__ double __longlong_as_double(long long int x) {
     double tmp;
     __builtin_memcpy(&tmp, &x, sizeof(tmp));
 
-    return x;
+    return tmp;
 }
 
 __device__ double __uint2double_rn(int x) { return (double)x; }
